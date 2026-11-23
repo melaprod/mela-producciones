@@ -190,6 +190,10 @@ section {
 .video-content h2 span,
 .contact-info h2 span {
     color: var(--verde);
+    text-shadow:
+        0 0 5px rgba(140, 198, 62, 0.35),
+        0 0 12px rgba(140, 198, 62, 0.45),
+        0 0 22px rgba(140, 198, 62, 0.25);
 }
 
 .header-description {
@@ -1037,7 +1041,7 @@ transform-origin: center center;
 
 .mela-360-orbit {
     position: relative;
-    width: min(100%, 540px);
+    width: min(100%, 760px);
     height: 540px;
     margin: 0 auto;
     display: flex;
@@ -1067,7 +1071,10 @@ transform-origin: center center;
 }
 
 .mela-360-center {
-    position: relative;
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
     z-index: 2;
     width: 145px;
     height: 145px;
