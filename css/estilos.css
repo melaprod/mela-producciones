@@ -1192,3 +1192,105 @@ section {
     .service-7 { top: 40%; left: 0; }
     .service-8 { top: 20%; left: 0; }
 }
+
+/* ===== MELA 360 - RED DIGITAL ANIMADA ===== */
+
+.mela-360-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #050805 !important;
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(140, 198, 62, 0.13), transparent 42%),
+        radial-gradient(circle at 15% 25%, rgba(140, 198, 62, 0.08), transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(140, 198, 62, 0.08), transparent 30%) !important;
+}
+
+/* Líneas digitales en movimiento */
+.mela-360-section::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        repeating-linear-gradient(
+            125deg,
+            transparent 0px,
+            transparent 75px,
+            rgba(140, 198, 62, 0.18) 76px,
+            transparent 78px,
+            transparent 145px
+        ),
+        repeating-linear-gradient(
+            35deg,
+            transparent 0px,
+            transparent 110px,
+            rgba(140, 198, 62, 0.12) 111px,
+            transparent 113px,
+            transparent 190px
+        );
+    animation: melaNetworkMove 22s linear infinite;
+    opacity: 0.65;
+}
+
+@keyframes melaNetworkMove {
+    from { transform: translate3d(-3%, -2%, 0); }
+    to { transform: translate3d(3%, 2%, 0); }
+}
+
+/* Centro MELA 360 */
+.mela-360-center {
+    background: #080d08 !important;
+    border: 2px solid #8CC63E !important;
+    box-shadow:
+        0 0 12px rgba(140, 198, 62, 0.9),
+        0 0 30px rgba(140, 198, 62, 0.55),
+        inset 0 0 20px rgba(140, 198, 62, 0.18) !important;
+    animation: melaCenterGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes melaCenterGlow {
+    from {
+        box-shadow: 0 0 10px rgba(140,198,62,.5),
+                    0 0 22px rgba(140,198,62,.25);
+    }
+    to {
+        box-shadow: 0 0 18px rgba(140,198,62,1),
+                    0 0 42px rgba(140,198,62,.65);
+    }
+}
+
+/* Botones de servicios */
+.mela-360-service {
+    background: #080d08 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #8CC63E !important;
+    box-shadow:
+        0 0 8px rgba(140,198,62,.45),
+        inset 0 0 8px rgba(140,198,62,.08) !important;
+    transition: all .3s ease;
+}
+
+.mela-360-service:hover {
+    background: #8CC63E !important;
+    color: #080d08 !important;
+    box-shadow: 0 0 20px rgba(140,198,62,.9) !important;
+}
+/* CENTRAR RED DIGITAL EN MOVILES */
+@media (max-width: 600px) {
+    .mela-360-section::before {
+        inset: -15% -45%;
+        background-position: center center;
+        animation: melaNetworkMobile 18s linear infinite;
+    }
+
+    @keyframes melaNetworkMobile {
+        from {
+            transform: translate3d(0, -2%, 0);
+        }
+        to {
+            transform: translate3d(0, 2%, 0);
+        }
+    }
+}
