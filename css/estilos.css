@@ -1294,3 +1294,41 @@ section {
         }
     }
 }
+/* RED DE CONEXIONES MELA 360 */
+.mela-360-orbit::before,
+.mela-360-orbit::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.mela-360-orbit::before {
+    background:
+        radial-gradient(circle, #8CC63E 2px, transparent 3px) 10% 20% / 120px 110px,
+        radial-gradient(circle, #8CC63E 2px, transparent 3px) 80% 70% / 140px 130px,
+        linear-gradient(28deg, transparent 49.7%, rgba(140,198,62,.35) 50%, transparent 50.3%),
+        linear-gradient(145deg, transparent 49.7%, rgba(140,198,62,.3) 50%, transparent 50.3%),
+        linear-gradient(75deg, transparent 49.7%, rgba(140,198,62,.25) 50%, transparent 50.3%);
+    background-size: 100% 100%;
+    animation: melaRedMove 12s linear infinite;
+}
+
+.mela-360-orbit::after {
+    background:
+        linear-gradient(155deg, transparent 49.7%, rgba(140,198,62,.25) 50%, transparent 50.3%),
+        linear-gradient(35deg, transparent 49.7%, rgba(140,198,62,.2) 50%, transparent 50.3%);
+    opacity: .7;
+    animation: melaRedMove 18s linear infinite reverse;
+}
+
+@keyframes melaRedMove {
+    from { background-position: 0 0; }
+    to { background-position: 45px 30px; }
+}
