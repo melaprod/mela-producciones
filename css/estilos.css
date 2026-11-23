@@ -1611,3 +1611,25 @@ transform-origin: center center;
         margin-right: 8px;
     }
 }
+/* AJUSTE DE NAVEGACIÓN EN PC */
+@media (min-width: 769px) {
+
+    .navbar {
+        position: fixed;
+    }
+
+    .navbar .nav-menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .navbar .language-switch {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
