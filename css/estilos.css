@@ -1454,11 +1454,22 @@ transform-origin: center center;
             height: auto !important;
         }
     }
-    /* LOGOS PARA BARRA SEGUN EL FONDO */
-.logo-negro {
+    /* CAMBIO DE NAVEGACIÓN SEGÚN EL FONDO */
+
+/* FONDO OSCURO */
+.navbar .logo-blanco {
+    display: block;
+}
+
+.navbar .logo-negro {
     display: none;
 }
 
+.navbar .nav-menu a {
+    color: #FFFFFF;
+}
+
+/* FONDO CLARO */
 .navbar.fondo-claro .logo-blanco {
     display: none;
 }
@@ -1467,10 +1478,14 @@ transform-origin: center center;
     display: block;
 }
 
-.navbar.fondo-claro {
-    background: rgba(255, 255, 255, 0.75);
-}
-
 .navbar.fondo-claro .nav-menu a {
     color: #8CC63E;
+}
+
+/* BARRA BLANCA TRANSPARENTE */
+.navbar.fondo-claro {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(140, 198, 62, 0.25);
 }
