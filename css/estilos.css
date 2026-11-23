@@ -1445,7 +1445,7 @@ transform-origin: center center;
     .header-content {
         justify-content: flex-start;
         padding-top: 10px;
-        padding-bottom: 100px;
+        padding-bottom: 70px;
     }
     @media (max-width: 768px) {
         .navbar .logo img {
