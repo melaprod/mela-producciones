@@ -1469,27 +1469,6 @@ transform-origin: center center;
     color: #FFFFFF;
 }
 
-/* FONDO CLARO */
-.navbar.fondo-claro .logo img.logo-blanco {
-    display: none !important;
-}
-
-.navbar.fondo-claro .logo img.logo-negro {
-    display: block !important;
-}
-
-.navbar.fondo-claro .nav-menu a {
-    color: #8CC63E;
-}
-
-/* BARRA BLANCA TRANSPARENTE */
-.navbar.fondo-claro {
-    background: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(140, 198, 62, 0.25);
-}
-
 /* CORRECCIÓN DEFINITIVA DE VISIBILIDAD DE LOGOS */
 
 .navbar img.logo-blanco {
