@@ -1511,3 +1511,40 @@ transform-origin: center center;
     display: block !important;
     visibility: visible !important;
 }
+/* AMBOS LOGOS EN LA MISMA POSICIÓN */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .logo img {
+    width: 105px !important;
+    height: auto !important;
+    object-fit: contain;
+}
+
+/* El logo negro se superpone al blanco */
+.navbar .logo-negro {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Fondo oscuro */
+.navbar:not(.fondo-claro) .logo-blanco {
+    opacity: 1;
+}
+
+.navbar:not(.fondo-claro) .logo-negro {
+    opacity: 0;
+}
+
+/* Fondo claro */
+.navbar.fondo-claro .logo-blanco {
+    opacity: 0;
+}
+
+.navbar.fondo-claro .logo-negro {
+    opacity: 1;
+}
