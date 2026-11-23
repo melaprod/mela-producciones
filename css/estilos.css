@@ -1581,12 +1581,22 @@ transform-origin: center center;
 }
 
 /* POSICIÓN EN PC */
-.navbar {
-    gap: 20px;
-}
-
-.language-switch {
-    margin-left: 15px;
+/* SELECTOR DE IDIOMA EN PC */
+@media (min-width: 769px) {
+    .navbar .language-switch {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 9px;
+        border-radius: 25px;
+        background: rgba(20, 20, 20, 0.75);
+        border: 1px solid rgba(140, 198, 62, 0.45);
+    }
 }
 
 /* POSICIÓN EN MÓVILES */
