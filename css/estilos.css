@@ -701,6 +701,7 @@ section {
     display: block;
     object-fit: contain;
 }
+
 /* MENU INFERIOR SOLO PARA MOVILES */
 
 .mobile-bottom-nav {
@@ -709,20 +710,28 @@ section {
 
 @media (max-width: 768px) {
 
+    /* BARRA MOVIL FLOTANTE CON GLOW */
     .mobile-bottom-nav {
         display: flex;
         position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 28px);
+        max-width: 420px;
         height: 68px;
+        box-sizing: border-box;
+        padding: 0 8px;
+        border-radius: 24px;
+        border: 1px solid #8CC63E;
         background: #111111;
         justify-content: space-around;
         align-items: center;
         z-index: 9999;
-        padding-bottom: env(safe-area-inset-bottom);
-        box-sizing: content-box;
-        border-top: 2px solid #8CC63E;
+        box-shadow:
+            0 0 8px rgba(140, 198, 62, 0.7),
+            0 0 18px rgba(140, 198, 62, 0.4),
+            0 8px 28px rgba(0, 0, 0, 0.45);
     }
 
     .mobile-bottom-nav a {
@@ -746,46 +755,49 @@ section {
         font-size: 10px;
     }
 
+    /* SERVICIOS: BOTON CIRCULAR DESTACADO */
+    .mobile-bottom-nav a[href="#servicios"] {
+        flex: 1.2;
+        transform: translateY(-12px);
+    }
+
+    .mobile-bottom-nav a[href="#servicios"] span {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #8CC63E;
+        color: #111111;
+        font-size: 25px;
+        box-shadow:
+            0 0 8px #8CC63E,
+            0 0 18px rgba(140, 198, 62, 0.8),
+            0 0 30px rgba(140, 198, 62, 0.4);
+    }
+
+    .mobile-bottom-nav a[href="#servicios"] small {
+        color: #8CC63E;
+        font-weight: bold;
+    }
+
     .mobile-bottom-nav a:active,
     .mobile-bottom-nav a:focus {
         color: #8CC63E;
     }
 
-    body {
-        padding-bottom: 85px;
-    }
-
+    /* OCULTAR MENU SUPERIOR EN MOVILES */
     .menu-toggle,
     .nav-menu {
         display: none !important;
-    }
-}
-
-/* BARRA MOVIL FLOTANTE */
-
-@media (max-width: 768px) {
-
-    .mobile-bottom-nav {
-        position: fixed;
-        bottom: calc(12px + env(safe-area-inset-bottom));
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100% - 28px);
-        max-width: 420px;
-        height: 68px;
-        box-sizing: border-box;
-        padding: 0 8px;
-        border-radius: 24px;
-        border: 1px solid #8CC63E;
-        background: #111111;
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
-        z-index: 9999;
     }
 
     body {
         padding-bottom: 100px;
     }
 }
+
 
 /* ============== MELA 360 ============== */
 
