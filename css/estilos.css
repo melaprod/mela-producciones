@@ -1377,3 +1377,46 @@ transform-origin: center center;
         filter: drop-shadow(0 0 2px #8CC63E);
     }
 }
+
+/* =========================
+   WHATSAPP FLOTANTE MELA
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #8CC63E;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 32px;
+    z-index: 10000;
+    border: 1px solid #8CC63E;
+    box-shadow:
+        0 0 10px rgba(140, 198, 62, 0.7),
+        0 0 25px rgba(140, 198, 62, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 15px rgba(140, 198, 62, 0.9),
+        0 0 32px rgba(140, 198, 62, 0.6);
+}
+
+/* POSICIÓN EN MÓVILES */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        right: 20px;
+        bottom: calc(100px + env(safe-area-inset-bottom));
+        width: 54px;
+        height: 54px;
+    }
+}
