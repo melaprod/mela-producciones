@@ -732,7 +732,7 @@ border-bottom: 1px solid rgba(140, 198, 62, 0.35);
 }
 
 .header .navbar .logo img {
-    width: 150px !important;
+    width: 135px !important;
     max-width: none !important;
     max-height: none !important;
     height: auto !important;
@@ -1453,8 +1453,8 @@ transform-origin: center center;
     }
     @media (max-width: 768px) {
         .navbar .logo img {
-            width: 155px !important;
-            max-width: 155px !important;
+            width: 105px !important;
+            max-width: 105px !important;
             height: auto !important;
         }
     }
