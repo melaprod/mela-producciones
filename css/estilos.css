@@ -184,12 +184,18 @@ section {
     margin-bottom: 25px;
 }
 
+/* Verde sin glow por defecto */
 .header-content h1 span,
 .intro-section h2 span,
 .section-heading h2 span,
 .video-content h2 span,
 .contact-info h2 span {
     color: var(--verde);
+    text-shadow: none;
+}
+
+/* Glow solamente en el título principal */
+.header-content h1 span {
     text-shadow:
         0 0 5px rgba(140, 198, 62, 0.35),
         0 0 12px rgba(140, 198, 62, 0.45),
