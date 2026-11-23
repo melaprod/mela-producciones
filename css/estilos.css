@@ -1545,7 +1545,7 @@ transform-origin: center center;
     nav.navbar {
         display: flex !important;
         justify-content: flex-start !important;
-        align-items: center !important;
+        align-items: right !important;
     }
 
     nav.navbar > a.logo {
