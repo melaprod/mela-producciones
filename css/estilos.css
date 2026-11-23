@@ -1432,9 +1432,10 @@ transform-origin: center center;
         padding-top: 10px;
         padding-bottom: 100px;
     }
-}
-@media (max-width: 768px) {
-    .logo img {
-        width: 165px;
+    @media (max-width: 768px) {
+        .navbar .logo img {
+            width: 155px !important;
+            max-width: 155px !important;
+            height: auto !important;
+        }
     }
-}
