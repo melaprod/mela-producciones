@@ -842,7 +842,8 @@ section {
 .mela-360-orbit::before {
     width: 330px;
     height: 330px;
-    animation: melaOrbitGlow 5s ease-in-out infinite;
+    animation: melaNetworkFlow 7s ease-in-out infinite;
+transform-origin: center center;
 }
 
 .mela-360-orbit::after {
@@ -1323,29 +1324,22 @@ transform-origin: center center;
     background: radial-gradient(circle, rgba(140,198,62,.16), transparent 65%);
     opacity: .5;
 }
-
-@keyframes melaNetworkGlow {
+@keyframes melaNetworkFlow {
     0% {
-        opacity: .45;
+        transform: scale(0.92);
+        opacity: 0.45;
         filter: drop-shadow(0 0 2px #8CC63E);
-        background-position: 0% 0%;
     }
+
     50% {
+        transform: scale(1.08);
         opacity: 1;
-        filter: drop-shadow(0 0 7px #8CC63E);
-        background-position: 50% 50%;
+        filter: drop-shadow(0 0 8px #8CC63E);
     }
+
     100% {
-        opacity: .65;
-        filter: drop-shadow(0 0 3px #8CC63E);
-        background-position: 100% 100%;
-    }
-}
-@keyframes melaNetworkRotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
+        transform: scale(0.92);
+        opacity: 0.45;
+        filter: drop-shadow(0 0 2px #8CC63E);
     }
 }
