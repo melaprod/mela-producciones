@@ -1140,3 +1140,55 @@ section {
     .service-2, .service-4 { right: 0; }
     .service-6, .service-8 { left: 0; }
 }
+/* ===== AJUSTE MELA 360 PARA MOVILES ===== */
+
+@media (max-width: 600px) {
+
+    .mela-360-section {
+        padding: 55px 10px 110px;
+    }
+
+    .mela-360-orbit {
+        width: 100%;
+        max-width: 360px;
+        height: 450px;
+        margin: 20px auto 0;
+    }
+
+    .mela-360-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 105px;
+        height: 105px;
+    }
+
+    .mela-360-service {
+        font-size: 10px;
+        padding: 8px 9px;
+        max-width: 48%;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .service-1 {
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .service-2 { top: 20%; right: 0; }
+    .service-3 { top: 40%; right: 0; }
+    .service-4 { bottom: 20%; right: 0; }
+
+    .service-5 {
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .service-6 { bottom: 20%; left: 0; }
+    .service-7 { top: 40%; left: 0; }
+    .service-8 { top: 20%; left: 0; }
+}
