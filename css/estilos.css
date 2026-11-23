@@ -1433,3 +1433,8 @@ transform-origin: center center;
         padding-bottom: 100px;
     }
 }
+@media (max-width: 768px) {
+    .logo img {
+        width: 165px;
+    }
+}
