@@ -1489,3 +1489,25 @@ transform-origin: center center;
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(140, 198, 62, 0.25);
 }
+
+/* CORRECCIÓN DEFINITIVA DE VISIBILIDAD DE LOGOS */
+
+.navbar img.logo-blanco {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.navbar img.logo-negro {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.navbar.fondo-claro img.logo-blanco {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.navbar.fondo-claro img.logo-negro {
+    display: block !important;
+    visibility: visible !important;
+}
