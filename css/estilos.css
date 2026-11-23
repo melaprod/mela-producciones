@@ -1538,3 +1538,38 @@ transform-origin: center center;
     }
 }
 
+
+/* ===== AJUSTE DEFINITIVO DEL MENÚ DE ESCRITORIO ===== */
+
+@media screen and (min-width: 769px) {
+    nav.navbar {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+
+    nav.navbar > a.logo {
+        margin-right: auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    nav.navbar > ul.nav-menu {
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        gap: 25px !important;
+        width: auto !important;
+    }
+
+    nav.navbar > .language-switch {
+        position: static !important;
+        transform: none !important;
+        margin: 0 0 0 25px !important;
+        flex-shrink: 0 !important;
+    }
+}
