@@ -1338,3 +1338,4 @@ section {
         background-position: 100% 100%;
     }
 }
+animation: melaNetworkGlow 5s ease-in-out infinite alternate;
