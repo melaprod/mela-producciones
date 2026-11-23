@@ -1322,6 +1322,19 @@ section {
 }
 
 @keyframes melaNetworkGlow {
-    from { opacity: .55; }
-    to { opacity: 1; }
+    0% {
+        opacity: .45;
+        filter: drop-shadow(0 0 2px #8CC63E);
+        background-position: 0% 0%;
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 7px #8CC63E);
+        background-position: 50% 50%;
+    }
+    100% {
+        opacity: .65;
+        filter: drop-shadow(0 0 3px #8CC63E);
+        background-position: 100% 100%;
+    }
 }
