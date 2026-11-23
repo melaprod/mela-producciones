@@ -1424,3 +1424,12 @@ transform-origin: center center;
     color: #FFFFFF;
     font-size: 34px;
 }
+/* AJUSTE DEL ENCABEZADO SOLO EN MOVILES */
+
+@media (max-width: 768px) {
+    .header-content {
+        justify-content: flex-start;
+        padding-top: 35px;
+        padding-bottom: 100px;
+    }
+}
