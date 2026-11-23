@@ -1504,7 +1504,7 @@ transform-origin: center center;
     background: rgba(255, 255, 255, 0.4);
 }
 
-
+}
 /* ===== POSICIÓN EN PC ===== */
 
 @media (min-width: 769px) {
@@ -1572,5 +1572,4 @@ transform-origin: center center;
         margin: 0 0 0 25px !important;
         flex-shrink: 0 !important;
     }
-}
 }
