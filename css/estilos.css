@@ -1504,39 +1504,37 @@ transform-origin: center center;
     background: rgba(255, 255, 255, 0.4);
 }
 
+
 /* ===== POSICIÓN EN PC ===== */
 
 @media (min-width: 769px) {
     .navbar {
         position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .navbar .logo {
+        margin-right: auto;
+        flex-shrink: 0;
     }
 
     .navbar .nav-menu {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        position: static;
+        transform: none;
+        display: flex;
+        align-items: center;
+        gap: 25px;
         margin: 0;
     }
 
     .navbar .language-switch {
-        position: absolute;
-        right: 5%;
-        top: 50%;
-        transform: translateY(-50%);
+        position: static;
+        transform: none;
+        margin: 0;
+        flex-shrink: 0;
     }
 }
 
-/* ===== POSICIÓN EN MÓVILES ===== */
-
-@media (max-width: 768px) {
-    .navbar {
-        justify-content: space-between;
-        gap: 8px;
-    }
-
-    .navbar .language-switch {
-        position: relative;
-        margin-left: auto;
-        margin-right: 8px;
-    }
-}
