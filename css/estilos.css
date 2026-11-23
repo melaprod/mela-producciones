@@ -786,3 +786,357 @@ section {
         padding-bottom: 100px;
     }
 }
+
+/* ============== MELA 360 ============== */
+
+.mela-360-section {
+    background: #111111;
+    color: #FFFFFF;
+    padding: 90px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mela-360-heading span {
+    color: #8CC63E;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.mela-360-heading h2 {
+    font-size: clamp(36px, 6vw, 58px);
+    margin: 18px 0 10px;
+    color: #FFFFFF;
+}
+
+.mela-360-heading h2 strong {
+    color: #8CC63E;
+}
+
+.mela-360-heading p {
+    color: #CCCCCC;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+.mela-360-orbit {
+    position: relative;
+    width: min(100%, 760px);
+    height: 500px;
+    margin: 0 auto;
+}
+
+.mela-360-orbit::before,
+.mela-360-orbit::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(140, 198, 62, 0.35);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.mela-360-orbit::before {
+    width: 330px;
+    height: 330px;
+    animation: melaOrbitGlow 5s ease-in-out infinite;
+}
+
+.mela-360-orbit::after {
+    width: 440px;
+    height: 440px;
+    border-style: dashed;
+    animation: melaOrbitRotate 35s linear infinite;
+}
+
+.mela-360-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background: #8CC63E;
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(140, 198, 62, 0.45);
+    z-index: 2;
+}
+
+.mela-360-center span {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.mela-360-center strong {
+    font-size: 42px;
+    line-height: 1;
+}
+
+.mela-360-center small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.mela-360-service {
+    position: absolute;
+    padding: 13px 18px;
+    border: 1px solid #8CC63E;
+    border-radius: 30px;
+    background: #191919;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 0 15px rgba(140, 198, 62, 0.12);
+    animation: melaServiceFloat 4s ease-in-out infinite;
+    transition: .3s ease;
+    z-index: 3;
+}
+
+.mela-360-service:hover {
+    background: #8CC63E;
+    color: #111111;
+    box-shadow: 0 0 25px rgba(140, 198, 62, 0.65);
+    transform: scale(1.08);
+}
+
+.service-1 { top: 4%; left: 50%; transform: translateX(-50%); }
+.service-2 { top: 20%; right: 3%; animation-delay: .5s; }
+.service-3 { top: 47%; right: 0; animation-delay: 1s; }
+.service-4 { bottom: 17%; right: 5%; animation-delay: 1.5s; }
+.service-5 { bottom: 3%; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
+.service-6 { bottom: 17%; left: 4%; animation-delay: 2.5s; }
+.service-7 { top: 47%; left: 0; animation-delay: 3s; }
+.service-8 { top: 20%; left: 3%; animation-delay: 3.5s; }
+
+@keyframes melaServiceFloat {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -9px; }
+}
+
+@keyframes melaOrbitRotate {
+    from { rotate: 0deg; }
+    to { rotate: 360deg; }
+}
+
+@keyframes melaOrbitGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(140,198,62,.08); }
+    50% { box-shadow: 0 0 28px rgba(140,198,62,.22); }
+}
+
+/* VERSION MOVIL */
+
+@media (max-width: 600px) {
+    .mela-360-section {
+        padding: 65px 12px;
+    }
+
+    .mela-360-heading p {
+        font-size: 14px;
+    }
+
+    .mela-360-orbit {
+        height: 430px;
+    }
+
+    .mela-360-orbit::before {
+        width: 210px;
+        height: 210px;
+    }
+
+    .mela-360-orbit::after {
+        width: 285px;
+        height: 285px;
+    }
+
+    .mela-360-center {
+        width: 115px;
+        height: 115px;
+    }
+
+    .mela-360-center span {
+        font-size: 16px;
+    }
+
+    .mela-360-center strong {
+        font-size: 32px;
+    }
+
+    .mela-360-center small {
+        font-size: 7px;
+    }
+
+    .mela-360-service {
+        font-size: 10px;
+        padding: 9px 11px;
+    }
+
+    .service-1 { top: 2%; }
+    .service-2 { top: 19%; right: 0; }
+    .service-3 { top: 42%; right: 0; }
+    .service-4 { bottom: 18%; right: 0; }
+    .service-5 { bottom: 2%; }
+    .service-6 { bottom: 18%; left: 0; }
+    .service-7 { top: 42%; left: 0; }
+    .service-8 { top: 19%; left: 0; }
+}
+/* ===== MELA 360 - SERVICIOS ANIMADOS ===== */
+
+.mela-360-section {
+    background: #FFFFFF;
+    color: #111111;
+    padding: 90px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mela-360-section .section-label {
+    color: #8CC63E;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.mela-360-section h2 {
+    font-size: clamp(28px, 5vw, 44px);
+    margin-bottom: 15px;
+}
+
+.mela-360-section h2 span {
+    color: #8CC63E;
+}
+
+.mela-360-section > p {
+    color: #555555;
+    max-width: 650px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.mela-360-orbit {
+    position: relative;
+    width: min(100%, 540px);
+    height: 540px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mela-360-orbit::before,
+.mela-360-orbit::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(140, 198, 62, 0.45);
+    border-radius: 50%;
+    animation: melaOrbit 18s linear infinite;
+}
+
+.mela-360-orbit::before {
+    width: 72%;
+    height: 72%;
+}
+
+.mela-360-orbit::after {
+    width: 92%;
+    height: 92%;
+    border-style: dashed;
+    animation-direction: reverse;
+}
+
+.mela-360-center {
+    position: relative;
+    z-index: 2;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: #111111;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(140, 198, 62, 0.35);
+    border: 3px solid #8CC63E;
+}
+
+.mela-360-center strong {
+    color: #8CC63E;
+    font-size: 38px;
+}
+
+.mela-360-center span {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.mela-360-service {
+    position: absolute;
+    z-index: 3;
+    background: #111111;
+    color: #FFFFFF;
+    border: 1px solid #8CC63E;
+    border-radius: 30px;
+    padding: 11px 17px;
+    font-size: 13px;
+    white-space: nowrap;
+    animation: melaFloat 3s ease-in-out infinite;
+}
+
+.mela-360-service:nth-child(even) {
+    animation-delay: 1s;
+}
+
+.service-1 { top: 2%; left: 50%; transform: translateX(-50%); }
+.service-2 { top: 19%; right: 0; }
+.service-3 { top: 42%; right: 0; }
+.service-4 { bottom: 18%; right: 3%; }
+.service-5 { bottom: 2%; left: 50%; transform: translateX(-50%); }
+.service-6 { bottom: 18%; left: 3%; }
+.service-7 { top: 42%; left: 0; }
+.service-8 { top: 19%; left: 0; }
+
+@keyframes melaOrbit {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes melaFloat {
+    0%, 100% { margin-top: 0; }
+    50% { margin-top: -8px; }
+}
+
+@media (max-width: 600px) {
+    .mela-360-section {
+        padding: 65px 12px;
+    }
+
+    .mela-360-orbit {
+        height: 390px;
+    }
+
+    .mela-360-center {
+        width: 110px;
+        height: 110px;
+    }
+
+    .mela-360-center strong {
+        font-size: 30px;
+    }
+
+    .mela-360-service {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+
+    .service-2, .service-4 { right: 0; }
+    .service-6, .service-8 { left: 0; }
+}
