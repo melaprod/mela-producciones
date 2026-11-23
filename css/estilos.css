@@ -1454,3 +1454,23 @@ transform-origin: center center;
             height: auto !important;
         }
     }
+    /* LOGOS PARA BARRA SEGUN EL FONDO */
+.logo-negro {
+    display: none;
+}
+
+.navbar.fondo-claro .logo-blanco {
+    display: none;
+}
+
+.navbar.fondo-claro .logo-negro {
+    display: block;
+}
+
+.navbar.fondo-claro {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.navbar.fondo-claro .nav-menu a {
+    color: #8CC63E;
+}
