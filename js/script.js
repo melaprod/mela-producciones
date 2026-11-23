@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function actualizarNavbar() {
         const barra = navbar.getBoundingClientRect();
-        const punto = barra.top + barra.height / 2;
+        const punto = barra.bottom + 1;
 
         let sobreFondoClaro = false;
 

@@ -1457,12 +1457,12 @@ transform-origin: center center;
     /* CAMBIO DE NAVEGACIÓN SEGÚN EL FONDO */
 
 /* FONDO OSCURO */
-.navbar .logo-blanco {
-    display: block;
+.navbar .logo img.logo-blanco {
+    display: block !important;
 }
 
-.navbar .logo-negro {
-    display: none;
+.navbar .logo img.logo-negro {
+    display: none !important;
 }
 
 .navbar .nav-menu a {
@@ -1470,12 +1470,12 @@ transform-origin: center center;
 }
 
 /* FONDO CLARO */
-.navbar.fondo-claro .logo-blanco {
-    display: none;
+.navbar.fondo-claro .logo img.logo-blanco {
+    display: none !important;
 }
 
-.navbar.fondo-claro .logo-negro {
-    display: block;
+.navbar.fondo-claro .logo img.logo-negro {
+    display: block !important;
 }
 
 .navbar.fondo-claro .nav-menu a {
