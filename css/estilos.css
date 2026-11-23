@@ -1454,93 +1454,38 @@ transform-origin: center center;
             height: auto !important;
         }
     }
-    /* CAMBIO DE NAVEGACIÓN SEGÚN EL FONDO */
+    
+/* ===== LOGO Y NAVEGACIÓN FIJOS ===== */
 
-/* FONDO OSCURO */
+/* Conservar siempre el logo blanco */
 .navbar .logo img.logo-blanco {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
-.navbar .logo img.logo-negro {
-    display: none !important;
-}
-
+/* Enlaces del menú siempre blancos */
 .navbar .nav-menu a {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
-/* CORRECCIÓN DEFINITIVA DE VISIBILIDAD DE LOGOS */
+/* ===== SELECTOR DE IDIOMA ES | EN ===== */
 
-.navbar img.logo-blanco {
-    display: block !important;
-    visibility: visible !important;
-}
-
-.navbar img.logo-negro {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-.navbar.fondo-claro img.logo-blanco {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-.navbar.fondo-claro img.logo-negro {
-    display: block !important;
-    visibility: visible !important;
-}
-/* AMBOS LOGOS EN LA MISMA POSICIÓN */
-.navbar .logo {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.navbar .logo img {
-    width: 105px !important;
-    height: auto !important;
-    object-fit: contain;
-}
-
-/* El logo negro se superpone al blanco */
-.navbar .logo-negro {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* Fondo oscuro */
-.navbar:not(.fondo-claro) .logo-blanco {
-    opacity: 1;
-}
-
-.navbar:not(.fondo-claro) .logo-negro {
-    opacity: 0;
-}
-
-/* Fondo claro */
-.navbar.fondo-claro .logo-blanco {
-    opacity: 0;
-}
-
-.navbar.fondo-claro .logo-negro {
-    opacity: 1;
-}
-/* SELECTOR DE IDIOMA ES | EN */
-.language-switch {
+.navbar .language-switch {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 5px 9px;
     border-radius: 25px;
-    background: rgba(20, 20, 20, 0.75);
-    border: 1px solid rgba(140, 198, 62, 0.45);
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(140, 198, 62, 0.65);
+    box-shadow: 0 0 12px rgba(140, 198, 62, 0.15);
     flex-shrink: 0;
+    z-index: 1001;
 }
 
-.language-switch a {
-    color: #FFFFFF;
+.navbar .language-switch a {
+    color: #FFFFFF !important;
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
@@ -1548,19 +1493,19 @@ transform-origin: center center;
     border-radius: 20px;
 }
 
-.language-switch a.active {
+.navbar .language-switch a.active {
     background: #8CC63E;
-    color: #111111;
+    color: #111111 !important;
 }
 
-.language-switch span {
+.navbar .language-switch span {
     width: 1px;
     height: 15px;
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* POSICIÓN EN PC */
-/* AJUSTE DE NAVEGACIÓN EN PC */
+/* ===== POSICIÓN EN PC ===== */
+
 @media (min-width: 769px) {
     .navbar {
         position: fixed;
@@ -1581,41 +1526,17 @@ transform-origin: center center;
     }
 }
 
-/* SELECTOR DE IDIOMA - PC */
-@media (min-width: 769px) {
+/* ===== POSICIÓN EN MÓVILES ===== */
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        gap: 8px;
+    }
+
     .navbar .language-switch {
-        position: absolute !important;
-        right: 5% !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        padding: 5px 9px !important;
-        border-radius: 25px !important;
-        background: rgba(20, 20, 20, 0.85) !important;
-        border: 1px solid rgba(140, 198, 62, 0.65) !important;
-        box-shadow: 0 0 12px rgba(140, 198, 62, 0.15) !important;
-        margin: 0 !important;
-    }
-
-    .navbar .language-switch a {
-        color: #FFFFFF !important;
-        text-decoration: none !important;
-        font-size: 12px !important;
-        font-weight: bold !important;
-        padding: 5px 7px !important;
-        border-radius: 20px !important;
-    }
-
-    .navbar .language-switch a.active {
-        background: #8CC63E !important;
-        color: #111111 !important;
-    }
-
-    .navbar .language-switch span {
-        width: 1px !important;
-        height: 15px !important;
-        background: rgba(255, 255, 255, 0.4) !important;
+        position: relative;
+        margin-left: auto;
+        margin-right: 8px;
     }
 }
