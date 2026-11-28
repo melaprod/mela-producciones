@@ -31,7 +31,7 @@ forgotPassword.addEventListener("click", async function (event) {
     }
 
     const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-        redirectTo: window.location.origin + "/admin/reset-password.html"
+        redirectTo: window.location.origin + "/admin-panel/reset-password.html"
     });
 
     if (error) {
