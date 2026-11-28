@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,44 +6,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Panel Administrativo | Mela Producciones</title>
+    <title>Escritorio | Mela Producciones</title>
 
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <div class="dashboard-container">
+    <!-- BARRA SUPERIOR -->
+    <header class="admin-topbar">
 
-        <header class="dashboard-header">
+        <div class="admin-brand">
 
-            <div class="logo">MELA</div>
+            <button class="admin-mobile-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-            <button id="logout-button">CERRAR SESIÓN</button>
+            <img src="../img/logo mela blanco.png" alt="Mela Producciones">
 
-        </header>
+            <span>MELA PRODUCCIONES</span>
 
-        <main class="dashboard-main">
+        </div>
 
-            <h1>Panel Administrativo</h1>
+        <div class="admin-topbar-actions">
 
-            <p>Bienvenido a Mela Producciones.</p>
+            <a href="../index.html" target="_blank" rel="noopener noreferrer" class="admin-button admin-button-dark">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                VER SITIO
+            </a>
 
-            <section class="dashboard-content">
+            <button id="logout-button" class="admin-button admin-button-primary">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                SALIR
+            </button>
 
-                <h2>Administración del sitio web</h2>
+        </div>
 
-                <p>Desde aquí podrás gestionar el contenido de tu página.</p>
+    </header>
 
-            </section>
 
-        </main>
+    <!-- MENÚ LATERAL -->
+    <aside class="admin-sidebar" id="admin-sidebar">
 
-    </div>
+        <div class="sidebar-label">MENÚ PRINCIPAL</div>
 
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="#" class="active" data-section="dashboard">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Escritorio
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="sidebar-label">CONTENIDO DEL SITIO</div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="#" data-section="inicio">
+                <i class="fa-solid fa-house"></i> Inicio y portada
+            </a></li>
+
+            <li><a href="#" data-section="nosotros">
+                <i class="fa-solid fa-users"></i> Nosotros
+            </a></li>
+
+            <li><a href="#" data-section="mela360">
+                <i class="fa-solid fa-circle-nodes"></i> MELA 360°
+            </a></li>
+
+            <li><a href="#" data-section="servicios">
+                <i class="fa-solid fa-briefcase"></i> Servicios
+            </a></li>
+
+            <li><a href="#" data-section="portafolio">
+                <i class="fa-solid fa-images"></i> Portafolio
+            </a></li>
+
+            <li><a href="#" data-section="contacto">
+                <i class="fa-solid fa-envelope"></i> Contacto
+            </a></li>
+
+            <li><a href="#" data-section="footer">
+                <i class="fa-solid fa-window-maximize"></i> Footer
+            </a></li>
+
+        </ul>
+
+
+        <div class="sidebar-label">MULTIMEDIA</div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="#" data-section="biblioteca">
+                <i class="fa-solid fa-photo-film"></i> Biblioteca multimedia
+            </a></li>
+
+        </ul>
+
+
+        <div class="sidebar-label">PUBLICACIONES</div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="#" data-section="blog">
+                <i class="fa-solid fa-pen-to-square"></i> Blog
+            </a></li>
+
+        </ul>
+
+
+        <div class="sidebar-label">PÁGINAS LEGALES</div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="#" data-section="privacidad">
+                <i class="fa-solid fa-shield-halved"></i> Privacidad
+            </a></li>
+
+            <li><a href="#" data-section="terminos">
+                <i class="fa-solid fa-file-contract"></i> Términos del servicio
+            </a></li>
+
+            <li><a href="#" data-section="aviso-legal">
+                <i class="fa-solid fa-scale-balanced"></i> Aviso legal
+            </a></li>
+
+        </ul>
+
+
+        <div class="sidebar-label">CONFIGURACIÓN</div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="#" data-section="configuracion">
+                <i class="fa-solid fa-gear"></i> Configuración general
+            </a></li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- ÁREA CENTRAL DE TRABAJO -->
+    <main class="admin-main">
+
+        <div class="admin-page-header">
+
+            <div>
+                <h1 id="page-title">Escritorio</h1>
+                <p class="admin-breadcrumb">
+                    MELA Producciones / Administración
+                </p>
+            </div>
+
+            <span class="admin-status">Sistema conectado</span>
+
+        </div>
+
+
+        <!-- PANTALLA INICIAL -->
+        <section class="admin-panel" id="section-dashboard">
+
+            <h2>Bienvenida al administrador de MELA</h2>
+
+            <p>
+                Desde este espacio podrás gestionar el contenido,
+                las imágenes, los videos, las publicaciones y las
+                páginas de tu sitio web.
+            </p>
+
+            <div class="admin-grid">
+
+                <div class="admin-panel">
+                    <h2>Contenido del sitio</h2>
+                    <p>Administra las secciones y textos de tu página.</p>
+                </div>
+
+                <div class="admin-panel">
+                    <h2>Biblioteca multimedia</h2>
+                    <p>Gestiona imágenes, videos y recursos visuales.</p>
+                </div>
+
+                <div class="admin-panel">
+                    <h2>Blog</h2>
+                    <p>Crea y administra artículos y publicaciones.</p>
+                </div>
+
+                <div class="admin-panel">
+                    <h2>Páginas legales</h2>
+                    <p>Prepara las políticas y documentos legales.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ÁREA DINÁMICA PARA LOS MÓDULOS -->
+        <section id="section-editor" class="admin-panel" hidden>
+
+            <h2 id="editor-title">Editar contenido</h2>
+
+            <p id="editor-description">
+                Selecciona una sección del menú para comenzar.
+            </p>
+
+            <div id="editor-content"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="dashboard.js"></script>
 
 </body>
-
 </html>
