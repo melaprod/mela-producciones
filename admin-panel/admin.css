@@ -141,3 +141,33 @@ button:hover {
     }
 
 }
+
+
+/* VISIBILIDAD DE CONTRASEÑA */
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 48px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.toggle-password:hover {
+    color: #8CC63E;
+}
