@@ -72,31 +72,27 @@ loginForm.addEventListener("submit", async function (event) {
 
 // MOSTRAR Y OCULTAR CONTRASEÑA
 
-const passwordInput = document.getElementById("password");
-const togglePassword = document.getElementById("toggle-password");
 
-if (passwordInput && togglePassword) {
+document.addEventListener("DOMContentLoaded", function () {
 
-    togglePassword.addEventListener("click", function () {
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("toggle-password");
 
-        if (passwordInput.type === "password") {
+    if (!passwordInput || !togglePassword) {
+        console.error("No se encontró el campo o el botón de contraseña.");
+        return;
+    }
 
-            passwordInput.type = "text";
+    togglePassword.addEventListener("click", function (event) {
 
-            this.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+        event.preventDefault();
 
-            this.title = "Ocultar contraseña";
+        const isHidden = passwordInput.getAttribute("type") === "password";
 
-        } else {
+        passwordInput.setAttribute("type", isHidden ? "text" : "password");
 
-            passwordInput.type = "password";
-
-            this.innerHTML = '<i class="fa-solid fa-eye"></i>';
-
-            this.title = "Mostrar contraseña";
-
-        }
+        console.log("Visibilidad de contraseña:", isHidden ? "visible" : "oculta");
 
     });
 
-}
+});
