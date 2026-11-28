@@ -369,3 +369,123 @@ select {
         padding: 18px;
     }
 }
+
+/* =====================================
+   AJUSTES RESPONSIVE MÓVILES
+   MELA PRODUCCIONES
+===================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.admin-topbar {
+    width: 100%;
+    min-width: 0;
+    gap: 8px;
+}
+
+.admin-brand {
+    min-width: 0;
+    gap: 8px;
+}
+
+.admin-brand span {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.admin-topbar-actions {
+    min-width: 0;
+    gap: 8px;
+}
+
+.admin-topbar-actions .admin-button {
+    white-space: nowrap;
+    padding: 9px 10px;
+    font-size: 11px;
+}
+
+.admin-main {
+    min-width: 0;
+    width: auto;
+}
+
+.admin-panel {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+
+    :root {
+        --topbar-height: 58px;
+    }
+
+    .admin-topbar {
+        padding: 0 10px;
+    }
+
+    .admin-brand {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .admin-brand img {
+        width: 27px;
+        height: 27px;
+        flex-shrink: 0;
+    }
+
+    .admin-brand span {
+        font-size: 10px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    .admin-topbar-actions {
+        flex-shrink: 0;
+        gap: 5px;
+    }
+
+    .admin-topbar-actions .admin-button {
+        padding: 8px 7px;
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    .admin-topbar-actions .admin-button i {
+        font-size: 10px;
+    }
+
+    .admin-main {
+        width: 100%;
+        margin: 0;
+        padding: calc(var(--topbar-height) + 18px) 12px 25px;
+    }
+
+    .admin-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .admin-panel {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .admin-page-header h1 {
+        font-size: 21px;
+    }
+
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
