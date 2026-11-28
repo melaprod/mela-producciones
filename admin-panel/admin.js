@@ -64,8 +64,6 @@ loginForm.addEventListener("submit", async function (event) {
         return;
     }
 
-    alert("¡Bienvenido al panel de Mela Producciones!");
-
     window.location.href = "dashboard.html";
 
 });
