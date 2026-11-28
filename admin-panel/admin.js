@@ -69,3 +69,34 @@ loginForm.addEventListener("submit", async function (event) {
     window.location.href = "dashboard.html";
 
 });
+
+// MOSTRAR Y OCULTAR CONTRASEÑA
+
+const passwordInput = document.getElementById("password");
+const togglePassword = document.getElementById("toggle-password");
+
+if (passwordInput && togglePassword) {
+
+    togglePassword.addEventListener("click", function () {
+
+        if (passwordInput.type === "password") {
+
+            passwordInput.type = "text";
+
+            this.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+
+            this.title = "Ocultar contraseña";
+
+        } else {
+
+            passwordInput.type = "password";
+
+            this.innerHTML = '<i class="fa-solid fa-eye"></i>';
+
+            this.title = "Mostrar contraseña";
+
+        }
+
+    });
+
+}
