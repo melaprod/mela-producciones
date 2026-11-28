@@ -5,11 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso Administrador | Mela Producciones</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
 
-    <h1>Administrador</h1>
-    <p>Acceso privado de Mela Producciones</p>
+    <div class="login-container">
 
+        <div class="logo">MELA</div>
+
+        <h1>Bienvenido</h1>
+        <p class="subtitle">Panel administrativo de Mela Producciones</p>
+
+        <form id="login-form">
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Ingresa tu correo"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Ingresa tu contraseña"
+                    required
+                >
+            </div>
+
+            <button type="submit">INICIAR SESIÓN</button>
+
+        </form>
+
+        <a href="#" class="forgot-password" id="forgot-password">
+            ¿Olvidaste tu contraseña?
+        </a>
+
+        <p class="footer">© 2026 Mela Producciones</p>
+
+    </div>
+
+    <script src="admin.js"></script>
 </body>
 </html>
